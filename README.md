@@ -13,11 +13,12 @@
 
 - Para enviar email:
 
-- Enviar post para http://localhost:8080/mail com JSON body seguindo o exemplo
+  - Enviar post para http://localhost:8080/mail com JSON body seguindo o exemplo
+    {
+      "destiny": "email de destino",
+      "subject": "assunto do email",
+      "text": "mesnagem do email"
+    }
 
-
-{
-"destiny": "email de destino",
-"subject": "assunto do email",
-"text": "mesnagem do email"
-}
+- Para listar todos os email enviados: 
+    - GET para http://localhost:8080/mail
