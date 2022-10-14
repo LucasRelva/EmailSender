@@ -15,6 +15,7 @@ public class EmailController {
     @Autowired
     private EmailService service;
 
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<MailDto> sendMail(@RequestBody MailDto mail) {
         MailDto savedMail = service.sendMail(mail);
@@ -22,6 +23,7 @@ public class EmailController {
         return ResponseEntity.ok(savedMail);
     }
 
+    @CrossOrigin
     @GetMapping
     public  ResponseEntity<List<MailDto>> findAll() {
         List<MailDto> response = service.findAll();
